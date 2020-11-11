@@ -1,0 +1,7 @@
+<h1>Here is the view for index</h1>
+<% @restaurants.each do |restaurant| %>
+    <h3><%= restaurant.name %></h3>
+    <p>Address - <%= restaurant.address %></p>
+    <p>Category - <%= restaurant.category %></p>
+    <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
+<% end %>
